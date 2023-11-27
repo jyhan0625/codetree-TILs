@@ -55,7 +55,7 @@ t : x와 y가 악수하는 시간
 
             else if (people_ill[handshake_x[i]] == 1 && people_ill[handshake_y[i]] != 1) {
 
-                if (people_K[handshake_x[i]]) {
+                if (people_K[handshake_x[i]] > 0) {
 
                     people_ill[handshake_y[i]] = 1;
                     people_K[handshake_x[i]] --;
@@ -66,7 +66,7 @@ t : x와 y가 악수하는 시간
 
             else if (people_ill[handshake_x[i]] != 1 && people_ill[handshake_y[i]] == 1) {
 
-                if (people_K[handshake_y[i]]) {
+                if (people_K[handshake_y[i]] > 0) {
 
                     people_ill[handshake_x[i]] = 1;
                     people_K[handshake_y[i]] --;
