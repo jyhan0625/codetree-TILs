@@ -63,7 +63,7 @@ int main() {
 
     int cnt = 0;
 
-    for(int i=0; i<time; i++) {
+    for(int i=1; i<time; i++) {
 
         if (i != 0 && c[i] != c[i - 1]) cnt++;
 
