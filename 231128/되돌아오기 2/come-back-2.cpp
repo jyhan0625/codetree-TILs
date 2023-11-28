@@ -1,11 +1,8 @@
 #include <iostream>
 #include <string>
 using namespace std;
-#define OFFSET 1000 // 근데 사실 map배열을 굳이 쓰지 않고 좌표로만 판단해도 가능함.
 
-int x = OFFSET, y = OFFSET, rot = 3;
-
-int map[2*OFFSET][2*OFFSET];
+int x = 0, y = 0, rot = 3;
 
 /*
 
@@ -29,8 +26,6 @@ int main() {
     cin >> com;
     int len = com.length();
 
-    map[x][y] = 1;
-
     for(int i=0; i<len; i++) {
 
         if(com[i] == 'F') {
@@ -52,7 +47,7 @@ int main() {
 
         }
 
-        if (map[x][y] == 1) {
+        if (x == 0 && y == 0) {
 
             cout << i + 1;
             return 0;
