@@ -92,7 +92,7 @@ int main() {
     else {
 
         x = 4 * n - start + 1;
-        y = n + 1;
+        y = 0;
 
     }
 
