@@ -2,6 +2,9 @@
 using namespace std;
 #define MAXN 1000
 
+
+
+
 /*
 
 [/]
@@ -20,7 +23,9 @@ using namespace std;
 
 
 
-char set[MAXN][MAXN] = {'\0'};
+
+
+char set[MAXN+1][MAXN+1] = {'\0'};
 
 int dx[4] = {0,1,0,-1}, dy[4] = {1,0,-1,0};
 
@@ -61,7 +66,7 @@ int main() {
     int start;
     cin >> start;
 
-    int x =0, y =0, rot = 0;
+    int x, y, rot;
 
     if (start <= n) {
 
@@ -72,7 +77,7 @@ int main() {
 
     else if (start <= 2 * n) {
 
-        x = start % 4;
+        x = start % n;
         y = n + 1;
 
     }
@@ -92,8 +97,6 @@ int main() {
     }
 
     rot = ((start - 1) / n + 1) % 4;
-
-
 
     int cnt = 0;
     bool trigger = true;
@@ -117,7 +120,7 @@ int main() {
 
         }
 
-        else trigger = false;
+        else if (set[x][y] == '\0') trigger = false;
 
 
 
