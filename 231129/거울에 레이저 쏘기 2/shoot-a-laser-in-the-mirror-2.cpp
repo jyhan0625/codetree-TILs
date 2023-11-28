@@ -62,29 +62,32 @@ int main() {
     cin >> start;
 
     int x =0, y =0, rot = 0;
- 
-    int tstart = start;
 
-    while(tstart>0) {
+    if (start <= n) {
 
-        int tx = x + dx[rot];
-        int ty = y + dy[rot];
+        x = 0;
+        y = start;
 
-        if (tx >= 0 && tx<=n && ty >=0 && ty<=n) {
+    }
 
-            x = tx;
-            y = ty;
-            tstart--;
+    else if (start <= 2 * n) {
 
-        }
+        x = start % 4;
+        y = n + 1;
 
-        else {
+    }
 
-            x = tx;
-            y = ty;
-            rot = (rot + 1) % 4;
+    else if (start <= 3 * n) {
 
-        }
+        x = n + 1;
+        y = 3 * n - start + 1;
+
+    }
+
+    else {
+
+        x = 4 * n - start + 1;
+        y = n + 1;
 
     }
 
