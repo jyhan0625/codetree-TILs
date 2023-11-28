@@ -8,7 +8,9 @@ int set[MAXN][MAXN];
 int getdir(char d) {
 
     if (d=='L') return 3;
-    else return 0;
+    else if (d=='R') return 0;
+    else if (d =='U') return 2;
+    else if (d =='D') return 1;
 
 }
 
@@ -23,14 +25,17 @@ int main() {
     cin >> n >> t >> r >> c >> d;
     int dir = getdir(d);
     c--;
+    r--;
 
     while(t--) {
 
         int tempc = c + dy[dir];
+        int tempr = r + dx[dir];
 
-        if (tempc>=0 && tempc<n) {
+        if (tempc>=0 && tempc<n && tempr>=0 && tempr <n) {
 
             c = tempc;
+            r = tempr;
 
         }
 
@@ -38,6 +43,6 @@ int main() {
 
     }
 
-    cout << r << " " << c+1;
+    cout << r+1 << " " << c+1;
     return 0;
 }
