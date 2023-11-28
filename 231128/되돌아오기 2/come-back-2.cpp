@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
-#define OFFSET 1000
+#define OFFSET 1000 // 근데 사실 map배열을 굳이 쓰지 않고 좌표로만 판단해도 가능함.
 
 int x = OFFSET, y = OFFSET, rot = 3;
 
