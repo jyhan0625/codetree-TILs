@@ -48,7 +48,7 @@ int main() {
 
         else if(com[i] == 'L') {
 
-            rot = (rot - 3) % 4;
+            rot = (rot + 3) % 4;
 
         }
 
