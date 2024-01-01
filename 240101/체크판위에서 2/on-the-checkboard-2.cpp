@@ -14,6 +14,13 @@ int main() {
 
     for(int i=0; i<r; i++) for(int j=0; j<c; j++) cin >> set[i][j];
 
+    if (set[0][0] == set[r][c]) {
+
+        cout << 0;
+        return 0;
+
+    }
+
     int count =0;
     char state = set[0][0];
     for(int i=1; i<r-2; i++) {
