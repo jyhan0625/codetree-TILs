@@ -29,13 +29,11 @@ int main() {
 
             if (set[i][j] != state) {
 
-                state = set[i][j];
-
                 for(int k=i+1; k<r-1; k++) {
 
                     for(int s= j +1; s<c-1; s++) {
 
-                        if (set[k][s] != state) count ++;
+                        if (set[k][s] == state) count ++;
 
                     }
 
