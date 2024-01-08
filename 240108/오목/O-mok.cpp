@@ -10,9 +10,9 @@ int main() {
 
     for(int i=0; i<19; i++) for(int j=0; j<19; j++) cin >> set[i][j];
 
-    for(int i=2; i<19; i++) {
+    for(int i=2; i<17; i++) {
 
-        for(int j=2; j<19; j++) {
+        for(int j=2; j<17; j++) {
 
             // 1. 가로로 어떤지 확인한다.
             for(int k=i-2; k<i+3; k++) {
@@ -51,10 +51,30 @@ int main() {
 
             }
 
-            //3. 대각으로 어떤지 확인한다.
+            //3. 하향 대각으로 어떤지 확인한다.
             for(int k=0; k<5; k++) {
 
                 if (set[i - 2 + k][j - 2 + k] != set[i][j]) break;
+
+                if (k == 4) {
+
+                    if (set[i][j] != 0) {
+                        
+
+                        cout << set[i][j] << endl;
+                        cout << i+1 << " " << j+1 << endl;
+                        return 0;
+
+                    }
+
+                }
+
+            }
+
+            //4. 상향 대각으로 어떤지 확인한다.
+            for(int k=0; k<5; k++) {
+
+                if (set[i - 2 + k][j + 2 - k] != set[i][j]) break;
 
                 if (k == 4) {
 
@@ -69,6 +89,7 @@ int main() {
                 }
 
             }
+
 
         }
 
