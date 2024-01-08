@@ -3,6 +3,7 @@
 using namespace std;
 
 int set[10000];
+
 int main() {
     // 여기에 코드를 작성해주세요.
 
@@ -22,7 +23,7 @@ int main() {
 
     int ans = INT_MIN;
 
-    for(int i=1; i<=n-k+1; i++) {
+    for(int i=1; i<=10000-k+1; i++) {
 
         int sum = 0;
 
