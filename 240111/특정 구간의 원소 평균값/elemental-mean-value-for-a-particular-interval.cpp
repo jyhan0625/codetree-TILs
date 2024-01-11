@@ -24,7 +24,7 @@ int main() {
 
             sum /= (j - i + 1);
 
-            for(int k=0; k<n; k++) {
+            for(int k=i; k<=j; k++) {
 
                 if (sum == set[k]) {
 
