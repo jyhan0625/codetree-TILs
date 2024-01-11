@@ -21,7 +21,7 @@ int main() {
     for(int i=0; i<100 - 2 * k; i++) {
 
         int sum = 0;
-        for(int j = i; j<= i + (2 * k); j++) {
+        for(int j = i; j<= i + (2 * k) + 1; j++) {
 
             sum += set[j];
 
@@ -30,8 +30,6 @@ int main() {
         ans = max(ans, sum);
 
     }
- 
-
 
     cout << ans;
 
