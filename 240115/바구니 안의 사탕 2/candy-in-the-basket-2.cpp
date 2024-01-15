@@ -22,7 +22,7 @@ int main() {
         int sum = 0;
         for(int j=i; j<=i+2*k; j++) {
 
-            if (j >= 100) break;
+            //if (j >= 100) break;
             sum += set[j];
 
         }
