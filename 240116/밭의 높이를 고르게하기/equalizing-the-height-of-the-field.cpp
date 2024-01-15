@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <climits>
 using namespace std;
 
 int set[100];
@@ -18,17 +19,22 @@ int main() {
 
     }
 
-    sort(set, set + n);
+    int ans = INT_MAX;
+    int tmp[100];
 
-    int ans = 0;
+    for(int i=0; i<n; i++) {
 
-    for(int i=0; i<t; i++) {
+        int sum = 0;
+        for(int j=i; j<i+t; j++) {
 
-        ans += set[i];
+            if (j>=n | j < 0) break;
+            sum += set[j];
+
+        }
+
+        ans = min(ans, sum);
 
     }
-
-
 
     cout << ans; // 최소 비용
 
