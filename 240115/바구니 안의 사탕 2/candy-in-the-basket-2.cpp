@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int set[100];
+int set[101];
 
 int main() {
 
@@ -20,9 +20,9 @@ int main() {
     for(int i=0; i<100; i++) {
 
         int sum = 0;
-        for(int j=i; j<=i+2*k; j++) {
+        for(int j=i-k; j<=i+k; j++) {
 
-            //if (j >= 100) break;
+            if (j >= 101 || j < 0) continue;
             sum += set[j];
 
         }
