@@ -20,17 +20,11 @@ int main() {
     }
 
     int ans = INT_MAX;
-    int tmp[100];
 
-    for(int i=0; i<n; i++) {
+    for(int i=0; i<=n-t; i++) {
 
         int sum = 0;
-        for(int j=i; j<i+t; j++) {
-
-            if (j>=n | j < 0) break;
-            sum += set[j];
-
-        }
+        for(int j=i; j<i+t; j++) sum += set[j];
 
         ans = min(ans, sum);
 
