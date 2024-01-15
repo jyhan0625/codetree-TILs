@@ -12,7 +12,7 @@ int main() {
 
         int val, x;
         cin >> val >> x;
-        set[x] = val;
+        set[x] += val;
 
     }
 
@@ -22,6 +22,7 @@ int main() {
         int sum = 0;
         for(int j=i; j<=i+2*k; j++) {
 
+            if (j >= 100) break;
             sum += set[j];
 
         }
