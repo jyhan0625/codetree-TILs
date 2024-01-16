@@ -23,13 +23,10 @@ int main() {
             int bsum = 0;
             for(int k=j+1; k<=5; k++) {
 
-                asum += set[k];
-
+                asum = set[i] + set[j] + set[k];
+                bsum = total - asum;
+                ans = min(ans, abs(asum - bsum));
             }
-
-            bsum = total - asum;
-
-            ans = min(ans, abs(asum - bsum));
 
         }
 
