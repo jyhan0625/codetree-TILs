@@ -41,6 +41,8 @@ int main() {
 
             for(int k=1; k<=9; k++) {
 
+                if (i == j || j == k || k == i) continue;
+
                 for(int s=0; s<n; s++) {
                     
                     int cor = 0;
