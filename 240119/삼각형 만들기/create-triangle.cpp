@@ -33,26 +33,28 @@ int main() {
 
     }
 
+    int ans = 0;
     for(int i=0; i<n; i++) {
 
         for(int j=i+1; j<n; j++) {
 
             for(int k=j+1; k<n; k++) {
 
-                if (set[i].y != set[j].y && set[j].y != set[k].y && set[j].y != set[i].y) continue;
-                if (set[i].x != set[j].x && set[j].x != set[k].x && set[j].x != set[i].x) continue;
+                if (set[i].y != set[j].y && set[j].y != set[k].y && set[k].y != set[i].y) continue;
+                if (set[i].x != set[j].x && set[j].x != set[k].x && set[k].x != set[i].x) continue;
 
-                cout << abs((set[i].x * set[j].y + set[j].x * set[k].y + set[k].x * set[i].y)
-                - (set[j].x * set[i].y + set[k].x * set[j].y + set[i].x * set[k].y));
+                int scale = abs((set[i].x * set[j].y + set[j].x * set[k].y + set[k].x * set[i].y) -    
+                                (set[j].x * set[i].y + set[k].x * set[j].y + set[i].x * set[k].y));
                 
-                return 0;
+                ans = max(ans, scale);
+                
             }
 
         }
 
     }
 
-    cout << 0;
+    cout << ans;
 
     return 0;
 }
