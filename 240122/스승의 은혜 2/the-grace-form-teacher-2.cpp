@@ -20,10 +20,12 @@ int main() {
         sort(set, set + n);
 
         int cnt = 0;
-        for(int money = m, j = 0; money>=0; j++) {
+        for(int money = m, j = 0; money>=0, j<n; j++) {
 
             cnt++;
             money -= set[j];
+
+            if (j == n-1) cnt++;
 
         }
 
