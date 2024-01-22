@@ -16,23 +16,21 @@ int main() {
 
     for(int i=0; i<n; i++) {
 
-        set[i] /= 2;
-        sort(set, set + n);
+        int temp[1000];
+        for(int i=0; i<n; i++) temp[i] = set[i];
+        temp[i] /= 2;
+
+        sort(temp, temp + n);
 
         int cnt = 0;
-        for(int money = m, j = 0; money>=0, j<n; j++) {
+        for(int money = m, j = 0; money>0, j < n; j++) {
 
-            cnt++;
-            money -= set[j];
-
-            if (j == n-1) cnt++;
+            money -= temp[j];
+            if (money>=0) cnt++;
 
         }
 
-        cnt--;
-
         ans = max(ans, cnt);
-        set[i] *= 2;
 
     }
 
