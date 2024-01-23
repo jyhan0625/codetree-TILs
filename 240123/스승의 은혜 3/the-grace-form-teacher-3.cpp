@@ -52,9 +52,9 @@ int main() {
 
         int cnt = 0;
 
-        for(int m = b, i = 0; m > 0; i++) {
+        for(int m = b, j = 0; m > 0; j++) {
 
-            m -= temp[i].cost + temp[i].del;
+            m -= temp[j].cost + temp[j].del;
 
             if (m>=0) cnt++;
 
