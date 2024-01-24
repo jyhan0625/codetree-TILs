@@ -22,7 +22,7 @@ class device {
 int finder(int i, int a, int b) {
 
     if (i < a) return c;
-    else if (i < b) return g;
+    else if (i <= b) return g;
     else return h;
 
 }
