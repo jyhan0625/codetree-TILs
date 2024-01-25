@@ -9,24 +9,26 @@ int main() {
 
     int n;
     cin >> n;
-    for(int i=0; i<n; i++) cin >> set[i];
-    sort(set, set + n);
+    int maxnum = 0;
+    for(int i=0; i<n; i++) {
 
-    // 공차가 양수일때 까지만 하면 된다.
+        cin >> set[i];
+        maxnum = max(maxnum, set[i]);
+        
+    }
 
     int ans = 0;
 
-    for(int i=1; i<=set[n-1]; i++) { // 순차적으로 돌 i
+    for(int i=1; i<=maxnum; i++) { // 순차적으로 돌 i
 
-        for(int j=0; j<n; j++) {
+        for(int j = 0; j<n; j++) { // 공차의 대상 설정
+            
+            int dist = i - set[j];
+            if (dist >=0) break;
 
-            if (i - set[j] <= 0) break; // 공차가 음수일 때 그만
+            for(int k=0; k<n; k++) if (set[k] - i == dist) ans++; // 같은 공차를 가지고 있는 애를 찾는다.
 
-            int dist = i - set[j]; // 공차 설정
-
-            for(int k=0; k<n; k++) if (i - set[k] == -dist) ans++;
-        }
-    
+        }    
     }
 
     cout << ans;
