@@ -27,7 +27,7 @@ int main() {
 
     }
 
-    if (xcnt + ycnt <= 3) cout << 1;
+    if (xcnt <= 3 || ycnt <= 3) cout << 1;
     else cout << 0;
 
     return 0;
