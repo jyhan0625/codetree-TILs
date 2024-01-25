@@ -14,7 +14,7 @@ int main() {
 
         cin >> set[i];
         maxnum = max(maxnum, set[i]);
-        
+
     }
 
     int ans = 0;
@@ -24,7 +24,7 @@ int main() {
         for(int j = 0; j<n; j++) { // 공차의 대상 설정
             
             int dist = i - set[j];
-            if (dist >=0) break;
+            if (dist <= 0) continue;
 
             for(int k=0; k<n; k++) if (set[k] - i == dist) ans++; // 같은 공차를 가지고 있는 애를 찾는다.
 
