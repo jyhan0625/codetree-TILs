@@ -20,7 +20,7 @@ point set[20];
 
 double get(int a, int b) {
 
-    if (set[a].x == set[b].x) return 0;
+    if (set[a].x == set[b].x) return 100;
     else return (set[a].y - set[b].y) / (set[a].x - set[b].x);
 
 }
@@ -61,6 +61,7 @@ int main() {
                             //셋 중에 그 하나라도 맞지 않는 기울기라면, 바로 break처리.
 
                             bool trig = true;
+
                             for(int m=0; m<n; m++) {
 
                                 if (m == i || m == k || m == q) continue;
@@ -75,8 +76,10 @@ int main() {
                             }
 
                             if (trig) {
+
                                 cout << 1;
                                 return 0;
+                                
                             }
 
                         }
