@@ -21,7 +21,7 @@ point set[20];
 double get(int a, int b) {
 
     if (set[a].x == set[b].x) return 100;
-    else return (set[a].y - set[b].y) / (set[a].x - set[b].x);
+    else return (double)(set[a].y - set[b].y) / (set[a].x - set[b].x);
 
 }
 
@@ -67,7 +67,7 @@ int main() {
                                 if (m == i || m == k || m == q) continue;
 
                                 if (get(m, i) != first && get(m, k) != second && get(m, q) != third) {
-
+                                    
                                     trig = false;
                                     break;
 
@@ -79,7 +79,6 @@ int main() {
 
                                 cout << 1;
                                 return 0;
-                                
                             }
 
                         }
