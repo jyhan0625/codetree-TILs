@@ -11,7 +11,7 @@ int main() {
     cin >> n >> m;
     for(int i=1; i<=n; i++) cin >> set[i];
 
-    int ans = INT_MIN;
+    int ans = 0;
 
     for(int i=1; i<n; i++) { // 시작위치
 
