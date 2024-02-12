@@ -96,8 +96,8 @@ int main() {
 
             for(int i=1; i<10; i++) {
 
-                if (cnt[i] == 2) a = j;
-                else if (cnt[i] == 1) b = j;
+                if (cnt[i] == 2) a = i;
+                else if (cnt[i] == 1) b = i;
 
             }
 
@@ -202,7 +202,7 @@ int main() {
 
             if (win[i][j] != 0) {
                 
-                ans++;
+                ans ++;
 
             }
 
