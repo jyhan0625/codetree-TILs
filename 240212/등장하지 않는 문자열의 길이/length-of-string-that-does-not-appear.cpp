@@ -11,19 +11,27 @@ int main() {
 
     for(int i=1; i<n; i++) {
 
-        string sub = sen.substr(0, i);
-        
-        int find = sen.find(sub, i);
+        bool trig = false;
 
-        if (find < 0) {
+        for(int j=0; j<n; j++) {
+
+            if (j + i > n) break;
+
+            string sub = sen.substr(j, i);
+            int find = sen.find(sub, j+1);
+
+            if (find > 0) trig = true;
+
+        }
+        
+        if (trig == false) {
 
             cout << i;
             return 0;
 
-        } 
+        }
 
     }
-
 
     return 0;
 }
