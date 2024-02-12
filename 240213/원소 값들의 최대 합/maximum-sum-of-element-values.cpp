@@ -13,12 +13,12 @@ int main() {
 
     int ans = 0;
 
-    for(int i=1; i<n; i++) { // 시작위치
+    for(int i=1; i<=n; i++) { // 시작위치
 
-        int sum = 0;
-        int next = 1;
+        int sum = set[i];
+        int next = set[i];
 
-        for(int j=0; j<m; j++) {
+        for(int j=1; j<m; j++) {
 
             sum += set[next];
             next = set[next];
