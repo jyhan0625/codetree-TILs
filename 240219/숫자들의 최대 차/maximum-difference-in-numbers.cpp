@@ -16,7 +16,7 @@ int main() {
     for(int i=0; i<n; i++) { // 시작지점
 
         int cnt = 0;
-        for(int j=i; j<n-1; j++) {
+        for(int j=i; j<n; j++) {
 
             if (abs(set[i] - set[j]) <= k) cnt ++;
 
