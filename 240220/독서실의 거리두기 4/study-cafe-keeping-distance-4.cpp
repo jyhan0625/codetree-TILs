@@ -18,8 +18,7 @@ int main() {
 
             if (seat[j] == '1') continue;
 
-            seat[i] = '1';
-            seat[j] = '1';
+            seat[i] = seat[j] = '1';
 
             int index = 0;
             int one[100] = {0};
@@ -31,17 +30,12 @@ int main() {
             } 
 
             int dist = INT_MAX;
-            for(int k=0; k<index-1; k++) {
-
-                dist = min(dist, abs(one[k] - one[k+1]));
-
-            }
+            for(int k=0; k<index-1; k++) dist = min(dist, abs(one[k] - one[k+1]));
 
             ans = max(ans, dist);
 
-            seat[i] = '0';
-            seat[j] = '0';
-
+            seat[i] = seat[j] = '0';
+            
         }
 
     }    
