@@ -26,7 +26,7 @@ int main() {
         bool trig = true;
         for(int j=0; j<n-1; j++) {
 
-            if (test[j] == test[j+1]) trig = false;
+            if (test[j] == test[j+1] || test[j] == 0 || test[j+1] == 0) trig = false;
 
         }
 
