@@ -38,7 +38,7 @@ int main() {
 
         }
 
-        if (maxcnt <= cnt) {
+        if (maxcnt <= cnt && cnt != 0) {
 
             bomb = i;
             maxcnt = cnt;
