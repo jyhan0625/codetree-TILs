@@ -34,7 +34,7 @@ int main() {
         int cnt = 0;
         for(int j=0; j<index-1; j++) {
 
-            if(abs(list[j] - list[j+1]) <= i) cnt++;
+            if(abs(list[j] - list[j+1]) <= k) cnt++;
 
         }
 
