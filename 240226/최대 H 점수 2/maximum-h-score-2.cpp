@@ -37,13 +37,6 @@ int main() {
         if (num >= i) ans = i;
 
     }
-
-    if (l == 0) {
-
-        cout << ans +1;
-        return 0;
-
-    }
     cout << ans;
 
 
