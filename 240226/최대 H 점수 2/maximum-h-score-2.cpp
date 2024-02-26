@@ -11,20 +11,14 @@ int main() {
 
     int ans = 0;
 
-    for(int i=0; i<=100; i++) { // H값 설정
-
+    for(int h=0; h<=100; h++) { // H값 설정
 
         int cost  = 0, num = 0;
 
         for(int j=0; j<n; j++) {
 
-            if (set[j] == i) num++; // H값이랑 같은 경우 -> cost 올릴 필요 x
-            else if (set[j] - 1 == i) {
-
-                cost++;
-                num++;
-
-            }
+            if (set[j] >= h) num++; // H값이랑 같은 경우 -> cost 올릴 필요 x
+            else if (set[j] + 1 == h) cost++;
 
             // 현재 cost는 1점을 올리면 H점수가되는 수들의 개수
 
@@ -33,10 +27,10 @@ int main() {
 
         }
 
-
-        if (num >= i) ans = i;
+        if (num >= h) ans = h;
 
     }
+
     cout << ans;
 
 
