@@ -22,10 +22,10 @@ int main() {
 
             // 현재 cost는 1점을 올리면 H점수가되는 수들의 개수
 
-            if (cost <= l) num += cost;
-            else num += l;
-
         }
+
+        if (cost <= l) num += cost;
+        else num += l;
 
         if (num >= h) ans = h;
 
