@@ -9,14 +9,6 @@ int main() {
     cin >> n >> l;
     for(int i=0; i<n; i++) cin >> set[i];
 
-    if (l == 0) {
-
-        cout << 1;
-        return 0;
-
-    }
-
-
     int ans = 0;
 
     for(int i=0; i<=100; i++) { // H값 설정
@@ -46,7 +38,12 @@ int main() {
 
     }
 
+    if (l == 0) {
 
+        cout << ans +1;
+        return 0;
+
+    }
     cout << ans;
 
 
