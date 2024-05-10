@@ -51,7 +51,7 @@ int main() {
 
         else if(order == 'D') {
 
-            it = bread.erase(it);
+            if(it != bread.end()) it = bread.erase(it);
 
         }
 
