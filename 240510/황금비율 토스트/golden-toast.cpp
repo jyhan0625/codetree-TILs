@@ -29,18 +29,15 @@ int main() {
 
         if(order == 'L') {
 
-            if(it == bread.begin()) continue;
-            else it--;
+            if(it != bread.begin()) it--;
 
         }
 
         else if(order == 'R') {
 
-            if(++it == bread.end()) { 
-                it--;
+            if(it != bread.end()) { 
+                it++;
             }
-            
-            else it++;
 
         }
 
@@ -49,7 +46,6 @@ int main() {
             char input;
             cin >> input;
             bread.insert(it, input);
-            it++;
 
         }
 
