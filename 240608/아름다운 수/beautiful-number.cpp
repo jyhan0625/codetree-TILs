@@ -8,22 +8,16 @@ vector<int> set;
 
 void beauty(int cur) {
 
-    if(cur == n) {
+    if(set.size() == n) {
 
         sum++;
-        for(int i=0; i<set.size(); i++) {
-
-            set.pop_back();
-
-        }
 
         return;
 
     }
 
-    else if(cur >= n+1) {
+    else if(set.size() >= n+1) {
         
-        for(int i=0; i<set.size(); i++) set.pop_back();
         return;
 
     }
@@ -35,7 +29,7 @@ void beauty(int cur) {
             set.push_back(j);
 
         }
-        beauty(set.size());
+        beauty(i);
         for(int j=0; j<i; j++) {
 
             set.pop_back();
@@ -54,7 +48,7 @@ void beauty(int cur) {
 int main() {
     // 여기에 코드를 작성해주세요.
     cin >> n;
-    beauty(n);
+    beauty(0);
 
     cout << sum;
     return 0;
