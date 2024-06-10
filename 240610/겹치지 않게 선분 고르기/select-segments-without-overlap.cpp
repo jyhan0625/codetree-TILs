@@ -82,7 +82,9 @@ int main() {
     }
 
     lines(0, 0, 0);
-    cout << ans;
+
+    if (ans == 0) cout << 1;
+    else cout << ans;
 
     return 0;
 }
