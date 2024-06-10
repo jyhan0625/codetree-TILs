@@ -1,6 +1,4 @@
 #include <iostream>
-#include <vector>
-
 using namespace std;
 
 int n, ans;
@@ -25,10 +23,9 @@ class newdata {
 newdata d[15];
 
 // cur은 현재 어디까지인지 인덱스
-// num은 line의 개수
 // ans는 점수
 
-void lines(int cur, int num, int curans) {
+void lines(int cur, int curans) {
 
     if(cur == n) {
 
@@ -37,24 +34,31 @@ void lines(int cur, int num, int curans) {
 
     }
 
+    for(int i=0; i<n; i++) {
 
-    for(int i=cur; i<n; i++) {
+        bool trig = false;
+        for(int j=d[i].x; j<=d[i].y; j++) {
 
-        for(int j=d[cur].x; j<=d[cur].y; j++) {
-
-            if (set[j] != 0) return;
+            if (set[j] != 0) {
+                
+                ans = max(ans, curans);
+                trig = true;
+                break;
+            }
 
         }
 
-        for(int j=d[cur].x; j<=d[cur].y; j++) {
+        if (trig) continue;
+
+        for(int j=d[i].x; j<=d[i].y; j++) {
 
             set[j]++;
 
         }
 
-        lines(cur+1, num+1, curans+1);
+        lines(cur+1, curans+1);
 
-        for(int j=d[cur].x; j<=d[cur].y; j++) {
+        for(int j=d[i].x; j<=d[i].y; j++) {
 
             set[j]--;
 
@@ -62,9 +66,6 @@ void lines(int cur, int num, int curans) {
 
 
     }
-
-
-
 
 }
 
@@ -81,10 +82,9 @@ int main() {
 
     }
 
-    lines(0, 0, 0);
+    lines(0, 0);
 
-    if (ans == 0) cout << 1;
-    else cout << ans;
+    cout << ans;
 
     return 0;
 }
