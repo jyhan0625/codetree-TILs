@@ -8,10 +8,10 @@ int main() {
     cin >> n >> m;
 
     if (m == 1) {
-        cout << 2 * m;
+        cout << 2 * n;
         return 0;
     }
-    
+
     for (int i=0; i<n; i++) {
         for (int j=0; j<n; j++) cin >> spc[i][j];
     }
